@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buscador por Voz</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </head>
+  <body>
+    <h1>Buscador por Voz</h1>
+    <button onclick="startRecognition()">Iniciar Busca por Voz</button>
+    <form id="searchForm" action="/buscar" method="POST">
+      <input type="hidden" name="query" id="queryInput" />
+    </form>
+    <div id="result"></div>
+  </body>
+</html>
